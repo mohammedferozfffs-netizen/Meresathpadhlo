@@ -407,6 +407,18 @@
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
+    <script>
+window.onload = function() {
+    if (!localStorage.getItem("popupShown")) {
+        document.getElementById("popup").style.display = "block";
+        localStorage.setItem("popupShown", "true");
+    }
+};
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+    </script>
 </body>
 </html>
 
