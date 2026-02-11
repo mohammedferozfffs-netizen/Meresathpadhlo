@@ -408,6 +408,14 @@
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
         const API_URL = "https://meresathpadhlo-backend-api.onrender.com";
+        fetch(API_URL)
+  .then(res => res.text())
+  .then(data => {
+      console.log("Backend Response:", data);
+  })
+  .catch(err => {
+      console.error("Error connecting backend:", err);
+  });
     </script>
 <!-- Overlay -->
 <div id="overlay" style="
