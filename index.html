@@ -16,6 +16,18 @@
 
     <!-- Custom Tailwind Configuration for Colors and Fonts -->
     <script>
+        <script>
+const API_URL = "https://meresathpadhlo-backend-api.onrender.com";
+
+fetch(API_URL)
+  .then(res => res.text())
+  .then(data => {
+      document.getElementById("backend-status").innerText = "✅ Backend Connected";
+  })
+  .catch(err => {
+      document.getElementById("backend-status").innerText = "❌ Backend Not Connected";
+  });
+</script>
         tailwind.config = {
             darkMode: 'class', // Enable dark mode based on the 'dark' class
             theme: {
